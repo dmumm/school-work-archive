@@ -1,0 +1,47 @@
+memory allocation test 5, pointer size is 8 bytes
+free_list header node is located at offset 0x680
+alloc 6 blocks of 0xe0 each
+(since you need 0x20 bytes of tags on a split,
+ each request uses 0x100 bytes of free space)
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x40
+   --------------end of list--------------
+allocated blocks
+   alloc block 1 at offset 0x580 of size 0xe0
+   alloc block 2 at offset 0x480 of size 0xe0
+   alloc block 3 at offset 0x380 of size 0xe0
+   alloc block 4 at offset 0x280 of size 0xe0
+   alloc block 5 at offset 0x180 of size 0xe0
+   alloc block 6 at offset 0x80 of size 0xe0
+release ptr[1] - tests case 1
+   ---------------free list---------------
+   free block at offset 0x580 of size 0xe0
+   free block at offset 0x20 of size 0x40
+   --------------end of list--------------
+release ptr[4] - tests case 1
+   ---------------free list---------------
+   free block at offset 0x280 of size 0xe0
+   free block at offset 0x580 of size 0xe0
+   free block at offset 0x20 of size 0x40
+   --------------end of list--------------
+release ptr[3] - tests case 2
+   ---------------free list---------------
+   free block at offset 0x280 of size 0x1e0
+   free block at offset 0x580 of size 0xe0
+   free block at offset 0x20 of size 0x40
+   --------------end of list--------------
+release ptr[5] - tests case 3
+   ---------------free list---------------
+   free block at offset 0x180 of size 0x2e0
+   free block at offset 0x580 of size 0xe0
+   free block at offset 0x20 of size 0x40
+   --------------end of list--------------
+release ptr[2] - tests case 4
+   ---------------free list---------------
+   free block at offset 0x180 of size 0x4e0
+   free block at offset 0x20 of size 0x40
+   --------------end of list--------------
+release ptr[6] - tests case 4
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x640
+   --------------end of list--------------

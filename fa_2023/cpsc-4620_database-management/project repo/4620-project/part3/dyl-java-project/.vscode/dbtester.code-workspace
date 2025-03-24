@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+    ],
+    "settings": {
+        "java.project.referencedLibraries": [
+            "lib/**/*.jar",
+            "c:\\Users\\bowse\\Documents\\4620\\project repo\\4620-project\\mysql-connector-j-8.2.0.jar",
+            "${workspaceFolder}/../../*.jar"
+    ]}
+}

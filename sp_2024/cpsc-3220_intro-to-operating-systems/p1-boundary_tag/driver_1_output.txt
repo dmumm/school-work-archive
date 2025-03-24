@@ -1,0 +1,33 @@
+memory allocation test 1, pointer size is 8 bytes
+free_list header node is located at offset 0x680
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x640
+   --------------end of list--------------
+alloc 2 blocks of 0xf0 each
+(since you need an extra 0x20 bytes of tags on a split,
+ each split of 0xf0 bytes will use 0x110 bytes of free space)
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x530
+   --------------end of list--------------
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x420
+   --------------end of list--------------
+alloc 3 blocks of odd sizes - should round up to 0xf0 each
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x310
+   --------------end of list--------------
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x200
+   --------------end of list--------------
+   ---------------free list---------------
+   free block at offset 0x20 of size 0xf0
+   --------------end of list--------------
+alloc block of 0xd0 - 0x30 not left so should get remaining 0xf0
+   ----------free list is empty-----------
+allocated blocks
+   alloc block 1 at offset 0x570 of size 0xf0
+   alloc block 2 at offset 0x460 of size 0xf0
+   alloc block 3 at offset 0x350 of size 0xf0
+   alloc block 4 at offset 0x240 of size 0xf0
+   alloc block 5 at offset 0x130 of size 0xf0
+   alloc block 6 at offset 0x20 of size 0xf0

@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+
+    "workbench.editorAssociations": {
+        "*.md": "default"
+	},
+	"java.project.referencedLibraries": [
+		"lib/**/*.jar",
+		"mysql-connector-j-8.2.0.jar"
+	]
+}
+}

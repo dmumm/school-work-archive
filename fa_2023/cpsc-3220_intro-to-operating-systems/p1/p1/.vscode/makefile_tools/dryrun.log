@@ -1,0 +1,10 @@
+/usr/bin/make all -f /home/dmumm/dev/school/fa_2023/cpsc_3220/projects/p1/Makefile -C /home/dmumm/dev/school/fa_2023/cpsc_3220/projects/p1 --dry-run --keep-going --print-directory
+make: Entering directory '/home/dmumm/dev/school/fa_2023/cpsc_3220/projects/p1'
+ 
+rm -f -r *.o
+rm -f -r ../*.o
+rm -f -r *.so
+rm -f -r leakcount
+ 
+make: Leaving directory '/home/dmumm/dev/school/fa_2023/cpsc_3220/projects/p1'
+ 

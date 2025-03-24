@@ -1,0 +1,16 @@
+{
+	"folders": [
+        {
+            "path": ".."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "*.groupy": "ini",
+            "*.img": "code-text-binary",
+            "su_barrier.h": "c",
+            "stdlib.h": "c",
+            "unistd.h": "c"
+        }
+    }
+}

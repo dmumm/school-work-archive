@@ -1,0 +1,40 @@
+memory allocation test 2, pointer size is 8 bytes
+free_list header node is located at offset 0x680
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x640
+   --------------end of list--------------
+alloc 0x640 - tests getting all of the initial free block
+   ----------free list is empty-----------
+release 0x640 - put it back
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x640
+   --------------end of list--------------
+alloc 6 blocks of 0xe0 each (0x100 bytes after split)
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x40
+   --------------end of list--------------
+try to alloc 0x50 more
+alloc_mem() returns NULL - as expected
+try to alloc 0x20 - should result in empty free list
+   ----------free list is empty-----------
+release ptr[8] - tests adding to empty free list
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x40
+   --------------end of list--------------
+release ptr[6] - tests adding to free list with free above
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x140
+   --------------end of list--------------
+release other blocks - should have restored free list
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x640
+   --------------end of list--------------
+try everything a second time to make sure free list not corrupted
+   ----------free list is empty-----------
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x640
+   --------------end of list--------------
+   ----------free list is empty-----------
+   ---------------free list---------------
+   free block at offset 0x20 of size 0x640
+   --------------end of list--------------

@@ -1,0 +1,23 @@
+memory allocation test 3, pointer size is 8 bytes
+free_list header node is located at offset 0x680
+   ---------------free list---------------
+   free block at offset 0x180 of size 0x20
+   free block at offset 0x200 of size 0x30
+   free block at offset 0x2a0 of size 0x30
+   free block at offset 0x340 of size 0x40
+   free block at offset 0x400 of size 0x40
+   free block at offset 0x4c0 of size 0x50
+   free block at offset 0x5a0 of size 0x50
+   free block at offset 0x20 of size 0x100
+   --------------end of list--------------
+   ---------------free list---------------
+   free block at offset 0x180 of size 0x20
+   free block at offset 0x2a0 of size 0x30
+   free block at offset 0x340 of size 0x40
+   free block at offset 0x400 of size 0x40
+   free block at offset 0x5a0 of size 0x50
+   free block at offset 0x20 of size 0x100
+   --------------end of list--------------
+allocated blocks
+   alloc block 16 at offset 0x4c0 of size 0x50
+   alloc block 17 at offset 0x200 of size 0x30

@@ -1,0 +1,10 @@
+memory allocation test 4, pointer size is 8 bytes
+free_list header node is located at offset 0x680
+   alloc block 1 at offset 0x610 of size 0x50
+release_mem(ptr[1]) returns 0 - 0 expected
+ptr[2] gets NULL
+release_mem(ptr[2]) returns 1 - 1 expected
+   alloc block 3 at offset 0x460 of size 0x200
+release_mem(ptr[3]+3) returns 2 - 2 expected
+release_mem(ptr[3]) returns 0 - 0 expected
+repeat of release_mem(ptr[3]) returns 3 - 3 expected

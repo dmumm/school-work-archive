@@ -1,0 +1,7 @@
+for embedded image:
+Channel Averages: -0.0130924, -0.0130924, -0.0130924
+Channel RMS: -0.0130924, 0.0874227, 0.0874227
+
+for original image:
+Channel Averages: 0.414012, 0.414012, 0.413926
+Channel RMS: 0.255864, 0.237954, 0.201634

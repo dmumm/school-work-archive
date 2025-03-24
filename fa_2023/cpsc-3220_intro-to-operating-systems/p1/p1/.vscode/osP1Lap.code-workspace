@@ -1,0 +1,57 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+    "settings": {
+        "editor.detectIndentation": false,
+        "makefile.makefilePath": "${workspaceRoot}/Makefile",
+        "makefile.configurations": [
+
+            {
+                "name": "myTestDefault",
+                "makeArgs": [],
+                "makeDirectory": "${workspaceRoot}",
+                "makefilePath": "${workspaceRoot}/Makefile",
+                "makePath": "/usr/bin/make",
+                "problemMatchers": [
+                    "$gcc",
+                    "$msvc",
+
+                ]
+            }
+        ],
+        "makefile.launchConfigurations": [
+            {
+                "cwd": "${workspaceRoot}",
+                "binaryPath": "${workspaceRoot}/bin",
+                "binaryArgs": []
+            },
+            {
+                "cwd": "/home/dmumm/dev/school/fa_2023/cpsc_3220/projects/p1/bin",
+                "binaryPath": "/home/dmumm/dev/school/fa_2023/cpsc_3220/projects/p1/bin/leakcount",
+                "binaryArgs": []
+            }
+        ],
+        "makefile.loggingLevel": "Debug",
+        "makefile.makePath": "/usr/bin/make",
+        "makefile.additionalCompilerNames": [
+            "clang-tidy",
+            "gcc"
+        ],
+        "makefile.alwaysPreConfigure": false,
+        "makefile.configureAfterCommand": true,
+        "makefile.extensionLog": "${workspaceRoot}/.vscode/makefile_tools/extension.log",
+        "makefile.extensionOutputFolder": "${workspaceRoot}/.vscode/makefile_tools/",
+        "makefile.makeDirectory": "${workspaceRoot}",
+        "makefile.buildLog": "${workspaceRoot}/.vscode/makefile_tools/build.log",
+        "makefile.compileCommandsPath": "${workspaceRoot}/.vscode/compile_commands.json",
+        "makefile.configurationCachePath": "${workspaceRoot}/.vscode/makefile_tools/configurationCache.json",
+        "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+        "editor.fontSize": 16,
+        "debug.console.fontSize": 20,
+        "chat.editor.fontSize": 20,
+        "terminal.integrated.fontSize": 16,
+        }
+}

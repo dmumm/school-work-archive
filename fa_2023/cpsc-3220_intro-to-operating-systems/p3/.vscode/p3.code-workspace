@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+    ],
+    "settings": {
+        "files.associations": {
+            "*.groupy": "ini",
+            "array": "c",
+            "string_view": "c",
+            "initializer_list": "c",
+            "ranges": "c",
+            "utility": "c",
+            "mman.h": "c"
+        }
+    }
+}

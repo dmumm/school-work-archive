@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\bowse\\Documents\\4620\\project repo\\4620-project\\mysql-connector-j-8.2.0.jar",
+        "c:\\Users\\werec\\Documents\\Clemson\\CPSC4620\\4620-project\\mysql-connector-j-8.2.0.jar"
+    ],
+    "java.format.settings.url": "\"java.format.settings.url\": \"https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml\",",
+    "java.format.settings.profile": "GoogleStyle"
+}

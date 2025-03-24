@@ -1,0 +1,169 @@
+[Entity]
+- Attribute1
+- Attribute2
+...
+
+[Entity2]
+- AttributeA
+- AttributeB
+...
+
+[Entity] --[Relationship: Cardinality]--> [Entity2]
+
+[WeakEntity] --[Weak Relationship: Cardinality]--> [OwnerEntity]
+
+[SuperEntity]
+- AttributeX
+- AttributeY
+...
+
+[SubEntity1] --[Inherits]--> [SuperEntity]
+[SubEntity2] --[Inherits]--> [SuperEntity]
+
+[Disjoint/Overlap] among [SubEntity1], [SubEntity2]
+
+[Total/Partial] participation of [Entity] in [Relationship]
+
+######################################################################
+
+[Student]
+- StudentID
+- Name
+- Age
+
+[Course]
+- CourseID
+- CourseName
+
+[Student] --[Enrolls: 1:N]--> [Course]
+
+[Dependent] --[Weak Relationship: 1:1]--> [Student]
+
+[Person]
+- SSN
+- Name
+
+[Employee] --[Inherits]--> [Person]
+[Manager] --[Inherits]--> [Person]
+
+[Disjoint] among [Employee], [Manager]
+
+[Total] participation of [Student] in [Enrolls]
+
+######################################################################
+######################################################################
+
+[topping]
+- PK: topping_id
+- name
+- cost_per_unit
+- price_per_unit
+- units_in_personal
+- units_in_medium
+- units_in_large
+- units_in_xlarge
+- minimum_inventory
+- current_inventory
+
+[pizzas_topping]
+- PK, FK1: pizza_id -> [pizza]
+- PK, FK2: topping_id -> [topping]
+- is_extra
+
+[pizza]
+- PK: pizza_id
+- size
+- crust
+
+[pizza_purchase]
+- PK, FK1: pizza_id -> [pizza]
+- PK, FK2: order_id -> [order]
+- base_cost
+- base_price
+- total_discount
+
+[pizza_discount]
+- PK, FK1: pizza_id -> [pizza]
+- PK, FK2: order_id -> [order]
+- PK, FK3: coupon_id -> [coupon]
+
+[coupon]
+- PK: coupon_id
+- name
+- eligibility
+- discount_type
+
+[dollar_amount] --[Inherits]--> [coupon]
+- PK, FK1: coupon_id
+- percent_off
+
+
+[percent_off] --[Inherits]--> [coupon]
+- PK, FK1: coupon_id
+- dollars_off
+
+[Disjoint: dollar_amount, percent_off]
+[TotalCompleteness: Coupon]
+
+[order]
+- PK: order_id
+- order_type
+- time_requested
+- is_complete
+- base_cost
+- base_price
+- discount
+
+[order_discount]
+- PK, FK1: order_id -> [order]
+- PK, FK2: coupon_id -> [coupon]
+
+[dine_out] --[Inherits]--> [order]
+- PK, FK1: order_id
+- is_delivery
+- customer_id
+
+[delivery] --[Inherits]--> [dine_out]
+- PK, FK1: order_id -> [order]
+- delivery_address
+
+[Disjoint: delivery]
+[TotalCompleteness: dine_out]
+
+[dine_in] --[Inherits]--> [order]
+- PK, FK1: order_id -> [order]
+- table_num
+
+[Disjoint: dine_out, dine_in]
+[TotalCompleteness: order]
+
+[customer]
+- PK: customer_id
+- first_name
+- last_name
+- phone_number
+- has_address
+
+[delivery_customer] --[Inherits]--> [customer]
+- PK, FK1: customer_id -> [customer]
+- current_address
+
+[Disjoint: delivery_customer]
+[PartialCompleteness: customer]
+
+[topping] --[referred to by: 1-0:N]--> [pizzas_topping]
+[pizzas_topping] --[tops: 1:M-1]--> [pizza]
+[pizza] --[referenced by: 1-0:N]--> [pizza_purchase]
+[pizza_purchase] --[has: 1-0:N]--> [pizza_discount]
+[pizza_discount] --[is using: 0:M-1]--> [coupon]
+[pizza_purchase] --[makes up: 1:M-1]--> [order]
+[customer] --[orders: 1-0:N]--> [dine_out]
+
+
+
+
+
+
+
+
+
