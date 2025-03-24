@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dmumm/3120/assignment1/DynamicTable.h
+stdlib.h
+-
+
+/home/dmumm/3120/assignment1/Timer.h
+windows.h
+-
+sys/time.h
+-
+
+/home/dmumm/3120/assignment1/main.cpp
+iostream
+-
+fstream
+-
+cmath
+-
+DynamicTable.h
+/home/dmumm/3120/assignment1/DynamicTable.h
+Timer.h
+/home/dmumm/3120/assignment1/Timer.h
+

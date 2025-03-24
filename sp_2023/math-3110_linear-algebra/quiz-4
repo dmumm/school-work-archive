@@ -1,0 +1,48 @@
+=======
+4.3:
+-------
+* B only linearly independent if homogenous sequation only has trivial solution
+	- Every column has pivot = independent
+	- Free variable = dependent
+* Basis for H is a spanning set for H that is linearly indepdent 
+	- If dependent, eliminate vector that
+* Basis for Nul(A):
+	- Write Ax = 0 solution (REF)
+	- Parametric vector form, collect vectors
+		> x1 = 2x3 - 3x4, x2 = 2x3 - 2x4
+		> x = x3[2,2,1,0] + x4[-3,-2,0,1]
+		> basis for Nul(A) = {[2,2,1,0], [-3,-2,0,1]}
+* Basis for Col(A):
+	- REF
+	- Pivot columns (NOT number of pivot columns)
+* Basis for Row(A):
+	- REF
+	- Non-zero rows of REF of A (NOT number of non-zero rows)
+
+====================
+4.4: b-coordinates??
+--------------------
+
+================
+4.5: 
+---------------
+* Find basis:
+	- Show its spanning set
+	- Show its linearly independent
+* Find dimensions of subspace
+	- Number of linearly independent vectors that form basis
+* dim(Nul(A)) = number of free varaibles in Ax=0
+* dim(Col(A)) = number of pivot columns in A
+
+==============
+4.6
+-------------
+* Rank = non-zero rows in REF
+* Given 6x3 matrix with rank 3....
+	- dim(Nul(A)) + rank = num(col) ::::: dim(Nul(A) = num(col) - rank :::: dim(Nul(A)) = 0
+
+=============
+4.7
+--------------
+* Given each vector of a basis of a set B, to find the B-coordinates of a vector x, set basis vectors = x
+* To find a vector given its B coordinates, use each coordinate as a scalar for the vectors making up the basis B

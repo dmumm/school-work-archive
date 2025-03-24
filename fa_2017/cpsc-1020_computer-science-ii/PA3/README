@@ -1,0 +1,12 @@
+// Dylan Mumm
+// PA3
+// Dr Yvon Feaster, CPSC 1020
+// November 17th
+
+My second biggest problem was with the ofstream -- I simply couldn't figure out a way to
+pass it into a member function without throwing crazy errors when compiled, I didn't end up solving this.
+
+My biggest problem however was time -- I severely underestimated how long it would take me to finish
+
+
+I really liked this assignment when it came to teaching composition, but the ISBN aspect did seem a little unneeded and maybe better suited for lab

@@ -1,0 +1,70 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "make clean and make img",
+            "command": "make && make env",
+            "options": {
+                "cwd": "${workspaceFolder}/img"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Runs make clean and make"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ build img",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-std=c++14",
+                "-I${workspaceFolder}/img/include",
+                "-L${workspaceFolder}/img/lib",
+                "-o",
+                "${workspaceFolder}/img/bin/${fileBasenameNoExtension}",
+                "${workspaceFolder}/img/base/*.C"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/img/base/build"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "Builds binaries for img_viewer"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ build starter",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-std=c++14",
+                "-I${workspaceFolder}/starter/include",
+                "-L${workspaceFolder}/starter/lib",
+                "-o",
+                "${workspaceFolder}/starter/bin/${fileBasenameNoExtension}",
+                "${workspaceFolder}/starter/base/*.C"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/starter/base/build"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "Builds binaries for starter"
+        }
+    ],
+    "version": "2.0.0"
+}

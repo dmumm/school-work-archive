@@ -1,0 +1,7 @@
+Enter a three-digit integer: The square root of 703 is 26.51.
+This number contains a mix of even and odd digits
+Do you want to go again? (1 for yes, 0 for no): Enter a three-digit integer: The square root of 200 is 14.14.
+This number contains all even digits
+Do you want to go again? (1 for yes, 0 for no): Enter a three-digit integer: The square root of 333 is 18.25.
+This number contains all odd digits
+Do you want to go again? (1 for yes, 0 for no): 

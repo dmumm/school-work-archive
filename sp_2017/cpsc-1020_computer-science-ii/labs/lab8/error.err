@@ -1,0 +1,3 @@
+/tmp/driver-ea1929.o: In function `main':
+driver.cpp:(.text+0x4f9): undefined reference to `oldestDate(std::basic_ofstream<char, std::char_traits<char> >&, std::vector<Date, std::allocator<Date> >)'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)

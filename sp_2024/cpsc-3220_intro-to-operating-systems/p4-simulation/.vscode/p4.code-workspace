@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+    ],
+    "launch": {
+        "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/p4-simulation/a.out",
+            "args": [
+                "-v",
+                "<",
+                "trace1"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/p4-simulation",
+            "environment": [],
+            "externalConsole": false
+        }
+    ]
+    }
+}

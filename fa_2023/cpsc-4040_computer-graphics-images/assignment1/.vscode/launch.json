@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C/C++: g++ make, run, and debug img_viewer",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/img/bin/img_viewer",
+            "args": ["-image"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/img",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "make clean and make img",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}

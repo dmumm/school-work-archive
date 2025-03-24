@@ -1,0 +1,16 @@
+##
+## SPDX-License-Identifier: BSD-3-Clause
+## Copyright Contributors to the OpenEXR Project.
+##
+
+prefix=/home/dmumm/4040/demo/build
+exec_prefix=bin
+libdir=/home/dmumm/4040/demo/build/lib
+includedir=/home/dmumm/4040/demo/build/include
+PyIlmBase_includedir=/home/dmumm/4040/demo/build/include/OpenEXR
+
+Name: PyIlmBase
+Description: Python bindings for the IlmBase libraries
+Version: 2.5.8
+Libs: -L${libdir}  -lIlmImf -lz 
+Cflags:  -I${PyIlmBase_includedir}

@@ -1,0 +1,12 @@
+intVar1  = 4 and intVar2 = 3
+
+Expression values are:
+exp1 = 24
+exp2 = 2
+
+
+intVar3  = 3 and intVar4 = 5
+
+Expression values are:
+exp3 = 5
+exp4 = 1

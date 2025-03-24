@@ -1,0 +1,34 @@
+/*
+ * Dylan Mumm
+ * dmumm
+ * Lab #1, Section: 004
+ * Nick Glyder
+ *
+ * A simple program that prints a hello world
+ * ascii art.
+ *
+ */
+
+#include "stdio.h"
+
+int main(int argc, char const *argv[])
+{
+	const char* s = ""
+
+	"H   H   EEEEE   L       L        OOO"
+	"H   H   E       L       L       O   O"
+        "HHHHH   EEEE    L       L       O   O"
+        "H   H   E       L       L       O   O"
+        "H   H   EEEEE   LLLLL   LLLLL    OOO"
+
+
+        "W     W    OOO    RRRRR   L       DDDD     !!"
+        "W     W   O   O   R   R   L       D   D    !!"
+        "W  W  W   O   O   RRRR    L       D   D    !!"
+        " W W W    O   O   R R     L       D   D    !!"
+        "  W W      OOO    R   R   LLLLL   DDDD     oo";
+
+	printf("%s", s);
+
+	return(0);
+}

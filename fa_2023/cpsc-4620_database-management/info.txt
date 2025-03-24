@@ -1,0 +1,3 @@
+mysql -h mysql1.cs.clemson.edu -u ProjectDB_7xaq -p ProjectDB_15gb
+
+termanda101

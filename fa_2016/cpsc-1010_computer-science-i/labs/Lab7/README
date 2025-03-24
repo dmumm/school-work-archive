@@ -1,0 +1,29 @@
+Lab 7 Fall 2016:  reverse_echo
+
+This is a modified version of a program originally written by Kyle Krafka, 
+Oct. 30, 2013
+
+Description:
+   reverse_echo is a variant of a standard Linux command: echo.  In the echo
+   command, arguments passed from the command line are all printed out,
+   separated by spaces, with a newline character at the end.  reverse_echo
+   does the same, except the arguments entered at the command line are 
+	printed out in reverse order.
+
+   For example, if the executable is renamed as   reverse_echo   and you 
+   type the following to run it:
+
+       ./reverse_echo testing 1 2 3
+
+   the program will print out the following:
+								       
+       3 2 1 testing
+
+
+Compile Instructions:
+   gcc -Wall -o reverse_echo reverse_echo.c
+
+Run Instructions:
+   ./reverse_echo <arg1> <arg2> ... <argn>
+
+

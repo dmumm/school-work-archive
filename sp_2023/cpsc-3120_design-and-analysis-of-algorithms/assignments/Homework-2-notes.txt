@@ -1,0 +1,33 @@
+1. Prove that for a proper binary tree T with n nodes and height h, total number of nodes is at least 2h+1 and at most 2^(h+1)-1
+	* Proper binary tree: Every node other than leaves has two children
+	* Height: Depth of deepest node 
+	* Depth: How many ancestors a node has
+	* You can rephrase a proper binary tree as "A tree in which every node has either 0 or 2 children, and not any more"
+		- For every increase in height past the root, you must have 2 children. The root is 1 node, then there is at least 2 nodes per height expansion.
+		- For every increase in height past the root, you cannot have more than 2 children per node without increasing height further. 
+
+2. Prove that for a proper binary tree T with n nodes and height h, the height is at least log(n+1)-1 and at most (n-1)/2
+	* Given a height of h, we know that that the max nodes is 'n = 2h+1':
+		- Therefore, for a given node count n, the max height is:
+			>           n = 2h+1
+			>       n - 1 = 2h
+			> (n - 1) / 2 = h
+			> h = (n-1)/2
+	* Given a height of, we know that the minimum nodes is "n = 2^(h+1)-1"
+		- Therefore, for a given node count of n, the min height is:
+			> n = 2^(h+1) - 1
+			> n + 1 = 2^(h+1)
+			> 2^(h+1) = n + 1 [y=b^x => x=logby]
+			> h+1 = log2(n+1)
+			> h = log2(n+1) - 1
+
+3. What is the maximum and minimum number of red nodes in a Red-Black tree? Justify answer 
+	* Minimum:
+		- As the root is always black, and nodes are never required to be red for the tree to be valid, the minimum number of red nodes is 0, regardless of height or node count
+	* Maximum: 
+		- Given that
+			> Root is always black
+			> There can be no more than 2 red node children for every black node
+			> There can be no more than 0 red node children for every red node
+			> For each given "depth" of black nodes, there can be 2 red nodes for each parent
+		- The maximum number of red nodes can be no more than 2x the total quantity of black nodes 

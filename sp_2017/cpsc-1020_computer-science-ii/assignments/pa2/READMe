@@ -1,0 +1,12 @@
+> A short description of any problems you encountered when writing this program, and how you solved the the problems you encountered.
+
+* Overall syntax and structure of our class composition
+   - Trial and error
+* A ridiculous seg-fault that GDB couldn't help with, that seemed to indicate an issue with ofstream
+   - Put <= instead of < in a for loops
+* Thought I didn't understand how to use a function that returns bools
+   - Put brackets w/ the array I had as the function parameter
+
+> 3.	Your thoughts on the assignment.
+
+I actually really liked it! Possibly giving us the whole spring break...

@@ -1,0 +1,164 @@
+Id,Name,Shape Library,Page ID,Contained By,Group,Line Source,Line Destination,Source Arrow,Destination Arrow,Status,Text Area 1,Text Area 2,Comments
+1,Document,,,,,,,,,Draft,Cast Study 5,,
+2,Page,,,,,,,,,,OBJECTS,,
+3,External Entity,Data Flow,2,,,,,,,,External Entity,,
+4,Process,Data Flow,2,,,,,,,,1.0,Process,
+5,Data Store,Data Flow,2,,,,,,,,,Data Store,
+6,Page,,,,,,,,,,Context Diagram,,
+7,Text,Standard,6,,40,,,,,,Cast Study 5,,
+8,Text,Standard,6,,40,,,,,,"Dylan Mumm  |  February 23, 2023",,
+9,Rectangle,Geometric Shapes,6,,41,,,,,,,,
+10,Rectangle,Geometric Shapes,6,,42,,,,,,,,
+11,Rectangle,Geometric Shapes,6,,42,,,,,,,,
+12,User Image,User Images,6,,42,,,,,,,,
+13,Text,Standard,6,,42,,,,,,Lucidchart basic tutorials,,
+14,Rectangle,Geometric Shapes,6,,41,,,,,,,,
+15,Text,Standard,6,,41,,,,,,Helpful tips,,
+16,Text,Standard,6,,41,,,,,,Highlight important information by creating conditional formatting rules that format your document for you.,,
+17,User Image,User Images,6,,41,,,,,,,,
+18,User Image,User Images,6,,41,,,,,,,,
+19,Rectangle,Geometric Shapes,6,,41,,,,,,,,
+20,Text,Standard,6,,41,,,,,,"Helpful resources (Hold Shift + ⌘ or Ctrl, then click)",,
+21,Process,Data Flow,6,,,,,,,,0,EVCSS System,
+22,External Entity,Data Flow,6,,,,,,,,USER,,
+23,External Entity,Data Flow,6,,,,,,,,STAFF,,
+24,External Entity,Data Flow,6,,,,,,,,LOCAL ELECTRICITY GRID,,
+25,Text,Standard,6,,,,,,,,CONTEXT DIAGRAM,,
+26,Line,,6,,40,,,None,None,,,,
+27,Line,,6,,,22,21,None,Arrow,,"USER
+CHARGE
+REQUEST",,
+28,Line,,6,,,21,22,None,Arrow,,"CHARGER
+STATUS",,
+29,Line,,6,,,21,22,None,Arrow,, BILL,,
+30,Line,,6,,,24,21,None,Arrow,,RATES,,
+31,Line,,6,,,24,21,None,Arrow,,"GRID
+STATUS",,
+32,Line,,6,,,22,21,None,Arrow,,PAYMENT,,
+33,Line,,6,,,22,21,None,Arrow,,"ACCOUNT
+CONFIG
+REQUEST",,
+34,Line,,6,,,22,21,None,Arrow,,REPORT,,
+35,Line,,6,,,23,21,Arrow,None,,SYSTEM ACCESS,,
+36,Line,,6,,,21,23,None,Arrow,,SERVICE REPORTS,,
+37,Line,,6,,,21,23,Arrow,None,,CONFIG REQUEST,,
+38,Line,,6,,,23,21,None,Arrow,,LEASE STATUS,,
+39,Line,,6,,,21,23,None,Arrow,,,,
+40,Group 1,,6,,,,,,,,,,
+41,Group 2,,6,,,,,,,,,,
+42,Group 3,,6,,41,,,,,,,,
+43,Page,,,,,,,,,,Process 0,,
+44,External Entity,Data Flow,43,,,,,,,,USER,,
+45,External Entity,Data Flow,43,,,,,,,,APT,,
+46,External Entity,Data Flow,43,,,,,,,,"LOCAL
+GRID",,
+47,Text,Standard,43,,,,,,,,PROCESS 0 DIAGRAM,,
+48,Data Store,Data Flow,43,,,,,,,,D1,CONFIGS,
+49,Process,Data Flow,43,,,,,,,,1,"HANDLE
+CHARGERS",
+50,Process,Data Flow,43,,,,,,,,2,HANDLE SYSTEM ACCESS,
+51,Process,Data Flow,43,,,,,,,,3,"HANDLE
+BILLING",
+52,Process,Data Flow,43,,,,,,,,3.1,"GENERATE
+BILL",
+53,Process,Data Flow,43,,,,,,,,3.2,"VERIFY
+GUEST
+ELIGIBLITY",
+54,Data Store,Data Flow,43,,,,,,,,D2,CHARGE LOGS,
+55,Process,Data Flow,43,,,,,,,,3.3,POST PAYMENT,
+56,Data Store,Data Flow,43,,,,,,,,D3,PAY LOGS,
+57,Process,Data Flow,43,,,,,,,,3.4,"DEPOSIT
+PAYMENT",
+58,Data Store,Data Flow,43,,,,,,,,D2,CHARGE LOGS,
+59,Process,Data Flow,43,,,,,,,,0,EVCSS System,
+60,External Entity,Data Flow,43,,,,,,,,USER,,
+61,External Entity,Data Flow,43,,,,,,,,APT,,
+62,External Entity,Data Flow,43,,,,,,,,LOCAL GRID,,
+63,Text,Standard,43,,,,,,,,CONTEXT DIAGRAM,,
+64,Line,,43,,,44,49,None,Arrow,,"USER
+CHARGE
+REQUEST",,
+65,Line,,43,,,50,44,None,Arrow,,"CHARGER
+STATUS",,
+66,Line,,43,,,46,49,None,Arrow,,"GRID
+STATUS",,
+67,Line,,43,,,44,50,None,Arrow,,"ACCOUNT
+CONFIG REQUEST",,
+68,Line,,43,,,44,50,None,Arrow,,REPORT,,
+69,Line,,43,,,50,45,Arrow,None,,"CONFIG
+REQUEST",,
+70,Line,,43,,,45,51,None,Arrow,,"LEASE
+STATUS",,
+71,Line,,43,,,48,50,None,Arrow,,"STORED
+CONFIG",,
+72,Line,,43,,,46,51,None,Arrow,,RATES,,
+73,Line,,43,,,49,58,None,Arrow,,"GUEST
+CHARGE
+REQUEST",,
+74,Line,,43,,,50,48,None,Arrow,,"UPDATED
+CONFIG",,
+75,Line,,43,,,48,49,None,Arrow,,,,
+76,Line,,43,,,44,51,None,Arrow,,PAYMENT,,
+77,Line,,43,,,51,44,None,Arrow,,BILL,,
+78,Line,,43,,,50,45,None,Arrow,,"SYSTEM
+ACCESS",,
+79,Line,,43,,,50,45,None,Arrow,,,,
+80,Line,,43,,,50,45,None,Arrow,,"SYSTEM
+REPORT",,
+81,Line,,43,,,48,51,None,Arrow,,,,
+82,Line,,43,,,51,58,None,Arrow,,CHARGE APPROVAL,,
+83,Line,,43,,,52,,None,Arrow,,BILL,,
+84,Line,,43,,,,55,None,Arrow,,PAYMENT,,
+85,Line,,43,,,,52,None,Arrow,,RATES,,
+86,Line,,43,,,,54,None,Arrow,,"GUEST
+CHARGE
+REQUEST",,
+87,Line,,43,,,,52,None,Arrow,,"STORED
+CONFIG",,
+88,Line,,43,,,,53,None,Arrow,,,,
+89,Line,,43,,,53,52,None,Arrow,,"GUEST
+ELIGIBLITY",,
+90,Line,,43,,,55,56,None,Arrow,,"PAYMENT
+DETAILS",,
+91,Line,,43,,,56,57,None,Arrow,,"DAILY
+DEPOSIT",,
+92,Line,,43,,,55,54,None,Arrow,,"CHARGE
+APPROVAL",,
+93,Line,,43,,,55,,None,Arrow,,,,
+94,Line,,43,,,51,49,None,Arrow,,,,
+95,Line,,43,,,49,51,None,Arrow,,,,
+96,Line,,43,,,,53,None,Arrow,,,,
+97,Line,,43,,,58,51,None,Arrow,,USES,,
+98,Line,,43,,,54,52,None,Arrow,,USES,,
+99,Line,,43,,,49,58,None,Arrow,,USE,,
+100,Line,,43,,,49,50,None,Arrow,,STATUS,,
+101,Line,,43,,,,52,None,Arrow,,"LEASE
+STATUS",,
+102,Line,,43,,,,54,None,Arrow,,USE,,
+103,Line,,43,,,51,45,None,Arrow,,REVENUE,,
+104,Line,,43,,,57,,None,Arrow,,REVENUE,,
+105,Line,,43,,,60,59,None,Arrow,,PAYMENT,,
+106,Line,,43,,,59,60,None,Arrow,,"CHARGER
+STATUS",,
+107,Line,,43,,,59,60,None,Arrow,, BILL,,
+108,Line,,43,,,62,59,None,Arrow,,RATES,,
+109,Line,,43,,,62,59,None,Arrow,,"GRID
+STATUS",,
+110,Line,,43,,,60,59,None,Arrow,,"USER
+CHARGE
+REQUEST",,
+111,Line,,43,,,60,59,None,Arrow,,"ACCOUNT
+CONFIG
+REQUEST",,
+112,Line,,43,,,60,59,None,Arrow,,REPORT,,
+113,Line,,43,,,61,59,Arrow,None,,SYSTEM ACCESS,,
+114,Line,,43,,,59,61,None,Arrow,,SERVICE REPORT,,
+115,Line,,43,,,59,61,Arrow,None,,"CONFIG
+REQUEST",,
+116,Line,,43,,,61,59,None,Arrow,,"LEASE
+STATUS",,
+117,Line,,43,,,59,61,None,Arrow,,,,
+118,Line,,43,,,59,61,None,Arrow,,REVENUE,,
+119,Page,,,,,,,,,,Page 4,,
+120,MinimalTextBlock,Standard,119,,,,,,,,"PROCESS  3
+DIAGRAM ",,

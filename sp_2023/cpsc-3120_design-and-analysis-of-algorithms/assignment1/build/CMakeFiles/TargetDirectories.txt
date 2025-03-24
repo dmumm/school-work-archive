@@ -1,0 +1,3 @@
+/home/dmumm/3120/assignment1/build/CMakeFiles/rebuild_cache.dir
+/home/dmumm/3120/assignment1/build/CMakeFiles/edit_cache.dir
+/home/dmumm/3120/assignment1/build/CMakeFiles/dynamicTable.dir

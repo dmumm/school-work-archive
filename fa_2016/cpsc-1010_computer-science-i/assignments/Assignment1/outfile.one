@@ -1,0 +1,8 @@
+
+
+This program will print a character diamond.
+
+Enter a character:  
+Enter an odd number at least 1 but less than 40: 
+                                        A
+                                      ABCBA

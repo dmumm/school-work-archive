@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Factorial.dir/Factorial.cpp.o -o Factorial 

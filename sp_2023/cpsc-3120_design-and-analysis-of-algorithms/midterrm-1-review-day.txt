@@ -1,0 +1,49 @@
+Review on algorithm / chapter 1.1:
+	* What an algorithm is and notation used in questions
+BigO / chapter 1.1:
+	* First homework
+	* How things grow in comparison to eachother
+	* Big O rules and simplification, rules provided in question 
+Amortized analysis 1.4:
+	* Accountin method
+	* Potential method
+	* Previous hw / in class examples
+	* Remember difference between worst case and amortized
+		* Expect to answer what big O is for algorithm and then amortized 
+Union find 7.1-7.2
+	* List based
+	* Tree based
+		- Path compression 
+	* By rank
+	* By size
+	* Perform series of operations with some potentially not given implementation 
+	* Remember heuristics for find level and union level respectively 
+Trees
+	* AVL
+		* Insert
+		* Delete
+		* Prove property
+		* Show result of operation
+	* RB
+		* Removal not in any exam 
+		* Prove property
+		* Show result of operation 
+	* Splay 
+		* Insert
+		* Delete
+		* Will not need to prove a property
+
+Don't hold back questions during exam
+	* Please ask if youre interpreting questions correctly 
+
+Questions:
+* Can you use example to prove tree?
+	- Only if you argue general case on top of it
+	- Use generic variables 
+* Tips for studying?
+	- Think about small questions / exercises in lecture
+	- Re-do them now without looking at solution 
+* Is structure of exam similar to homework
+	- Yes
+	- Same style of questions
+

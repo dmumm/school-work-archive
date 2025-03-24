@@ -1,0 +1,56 @@
+Interview process
+	1. Determine people to interview
+		* Client
+			- Preliminary already involved middle managers and department heads
+			- Should now interview people from all levels
+			- Consult organization chart
+			- Perhaps even people from outside organization (though prompt asking for client)
+			- Look for informal structures not seen in org chart
+			- Determine when group interviews should be used and what those groups would be
+    2. Establish objectives for interview
+    	* Determine general areas to discuss
+    	* List facts to be gathered
+    	* Soliciting ideas, suggestions, and opinions during interview good idea
+    	* Objects differ based on person interviewed
+    		- Upper-level mangement: Big picture to understand system as a whole
+    		- Developers: Specific details about operations and business processes
+    	* Objectives change as fact finding process evolves
+    		- Farther in -> more specifics
+    	* Should be as brief as possible but as long as needed 
+	3. Develop questions
+		* Create standard list of interview questions
+			- Helps keep session on track and avoi dtangents
+			- Lets you compare answers
+			- Interviewer may depart from list because an answer to a previous Q leads to topic that warrants pursuing
+				> Question should be included in revised set of questions for future interviews
+				> If very important, query previous intervee about it
+		* Open-ended questions
+			- Examples
+				> What are users saying about new system
+				> How is this task performed
+				> Why do you perform the task that way
+				> How are the checks reconciled?
+				> What added features would you like to have in the new billing system
+			- Can be used to probe previous question further
+				> "Is there anything else you can tell me about this topic?"
+		* Close-ended questions
+			- Limit or restrict response
+			- Used when information that is more specific is needed or when facts must be verified
+			- Examples
+				> How many personal computers do you have in this department?
+				> Do you review the reports before they are sent out?
+				> How many hours of training does a clerk receive?
+				> Is the calculation procedure described in the manual?
+				> How many customers ordered products from the website last month?
+		* Range-of-response Questions
+			- Closed-ended questions
+			- Ask person to evaluate something by providing limited answers to specific responses or on a numeric scale
+			- Makes it easier to tabulate answers and interpret results\
+			- Examples
+				> On scale of 1-10, how effective was your training?
+				> How would you rate the serverity of the problem: Low, medium, or high?
+				> Is the system shutdown something that occurs never, sometimes, often, usually, or always?
+	4. Prepare for interview
+	5. Conduct interview
+	6. Document interview
+	7. Evaluate interview

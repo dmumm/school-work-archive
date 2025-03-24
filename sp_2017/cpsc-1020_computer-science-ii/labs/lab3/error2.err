@@ -1,0 +1,224 @@
+In file included from part1.c:3:
+In file included from ./functions.h:3:
+./functions.c:4:1: error: unknown type name 'header_t'
+header_t hdr;
+^
+./functions.c:5:1: error: unknown type name 'pixel_t'
+pixel_t hdr;
+^
+./functions.c:8:35: warning: declaration of 'struct header_t' will not be visible outside of this function [-Wvisibility]
+void readHeader(FILE* ptr, struct header_t *hdr)
+                                  ^
+./functions.c:10:34: error: incomplete definition of type 'struct header_t'
+  fscanf(ptr, "%s %d %d %d ", hdr->magic, &hdr->width, &hdr->height,
+                              ~~~^
+./functions.c:8:35: note: forward declaration of 'struct header_t'
+void readHeader(FILE* ptr, struct header_t *hdr)
+                                  ^
+./functions.c:14:37: warning: declaration of 'struct header_t' will not be visible outside of this function [-Wvisibility]
+void createHeader(FILE* ptr, struct header_t *hdr)
+                                    ^
+./functions.c:16:36: error: incomplete definition of type 'struct header_t'
+  fprintf(ptr, "%s %d %d %d\n", hdr->magic, hdr->width, hdr->height,
+                                ~~~^
+./functions.c:14:37: note: forward declaration of 'struct header_t'
+void createHeader(FILE* ptr, struct header_t *hdr)
+                                    ^
+./functions.c:20:35: warning: declaration of 'struct header_t' will not be visible outside of this function [-Wvisibility]
+void readPixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                  ^
+./functions.c:20:57: warning: declaration of 'struct pixel_t' will not be visible outside of this function [-Wvisibility]
+void readPixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                                        ^
+./functions.c:24:21: error: incomplete definition of type 'struct header_t'
+  for(i = 0; i < hdr->height; i++)
+                 ~~~^
+./functions.c:20:35: note: forward declaration of 'struct header_t'
+void readPixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                  ^
+./functions.c:26:23: error: incomplete definition of type 'struct header_t'
+    for(j = 0; j < hdr->width; j++)
+                   ~~~^
+./functions.c:20:35: note: forward declaration of 'struct header_t'
+void readPixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                  ^
+./functions.c:28:36: error: subscript of pointer to incomplete type 'struct pixel_t'
+       fscanf(ptr, "%c%c%c", pix[i][j].r, pix[i][j].g, pix[i][j].b);
+                             ~~~~~~^
+./functions.c:20:57: note: forward declaration of 'struct pixel_t'
+void readPixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                                        ^
+./functions.c:33:36: warning: declaration of 'struct header_t' will not be visible outside of this function [-Wvisibility]
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                   ^
+./functions.c:33:58: warning: declaration of 'struct pixel_t' will not be visible outside of this function [-Wvisibility]
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                                         ^
+./functions.c:37:21: error: incomplete definition of type 'struct header_t'
+  for(i = 0; i < hdr->height; i++)
+                 ~~~^
+./functions.c:33:36: note: forward declaration of 'struct header_t'
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                   ^
+./functions.c:39:23: error: incomplete definition of type 'struct header_t'
+    for(j = 0; j < hdr->width; j++)
+                   ~~~^
+./functions.c:33:36: note: forward declaration of 'struct header_t'
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                   ^
+./functions.c:41:37: error: subscript of pointer to incomplete type 'struct pixel_t'
+       fprintf(ptr, "%c%c%c", pix[i][j].r, pix[i][j].g, pix[i][j].b);
+                              ~~~~~~^
+./functions.c:33:58: note: forward declaration of 'struct pixel_t'
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                                         ^
+In file included from part1.c:3:
+./functions.h:21:31: warning: declaration of 'struct header_t' will not be visible outside of this function [-Wvisibility]
+void readHeader(FILE*, struct header_t *);
+                              ^
+./functions.h:21:6: error: conflicting types for 'readHeader'
+void readHeader(FILE*, struct header_t *);
+     ^
+./functions.c:8:6: note: previous definition is here
+void readHeader(FILE* ptr, struct header_t *hdr)
+     ^
+In file included from part1.c:3:
+./functions.h:23:33: warning: declaration of 'struct header_t' will not be visible outside of this function [-Wvisibility]
+void createHeader(FILE*, struct header_t *);
+                                ^
+./functions.h:23:6: error: conflicting types for 'createHeader'
+void createHeader(FILE*, struct header_t *);
+     ^
+./functions.c:14:6: note: previous definition is here
+void createHeader(FILE* ptr, struct header_t *hdr)
+     ^
+In file included from part1.c:3:
+./functions.h:25:31: warning: declaration of 'struct header_t' will not be visible outside of this function [-Wvisibility]
+void readPixels(FILE*, struct header_t *, struct pixel_t**);
+                              ^
+./functions.h:25:50: warning: declaration of 'struct pixel_t' will not be visible outside of this function [-Wvisibility]
+void readPixels(FILE*, struct header_t *, struct pixel_t**);
+                                                 ^
+./functions.h:25:6: error: conflicting types for 'readPixels'
+void readPixels(FILE*, struct header_t *, struct pixel_t**);
+     ^
+./functions.c:20:6: note: previous definition is here
+void readPixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+     ^
+In file included from part1.c:3:
+./functions.h:27:32: warning: declaration of 'struct header_t' will not be visible outside of this function [-Wvisibility]
+void writePixels(FILE*, struct header_t *, struct pixel_t** );
+                               ^
+./functions.h:27:51: warning: declaration of 'struct pixel_t' will not be visible outside of this function [-Wvisibility]
+void writePixels(FILE*, struct header_t *, struct pixel_t** );
+                                                  ^
+./functions.h:27:6: error: conflicting types for 'writePixels'
+void writePixels(FILE*, struct header_t *, struct pixel_t** );
+     ^
+./functions.c:33:6: note: previous definition is here
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+     ^
+part1.c:27:21: warning: incompatible pointer types passing 'header_t *' to parameter of type 'struct header_t *' [-Wincompatible-pointer-types]
+  readHeader(input, &hdr);
+                    ^~~~
+./functions.c:8:45: note: passing argument to parameter 'hdr' here
+void readHeader(FILE* ptr, struct header_t *hdr)
+                                            ^
+part1.c:28:24: warning: incompatible pointer types passing 'header_t *' to parameter of type 'struct header_t *' [-Wincompatible-pointer-types]
+  createHeader(output, &hdr);
+                       ^~~~
+./functions.c:14:47: note: passing argument to parameter 'hdr' here
+void createHeader(FILE* ptr, struct header_t *hdr)
+                                              ^
+part1.c:34:21: error: passing 'header_t' to parameter of incompatible type 'struct header_t *'
+  readPixels(input, hdr,image);
+                    ^~~
+./functions.c:20:45: note: passing argument to parameter 'hdr' here
+void readPixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                            ^
+part1.c:35:23: warning: incompatible pointer types passing 'header_t *' to parameter of type 'struct header_t *' [-Wincompatible-pointer-types]
+  writePixels(output, &hdr,image);
+                      ^~~~
+./functions.c:33:46: note: passing argument to parameter 'hdr' here
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                             ^
+part1.c:35:28: warning: incompatible pointer types passing 'pixel_t **' to parameter of type 'struct pixel_t **' [-Wincompatible-pointer-types]
+  writePixels(output, &hdr,image);
+                           ^~~~~
+./functions.c:33:68: note: passing argument to parameter 'pix' here
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                                                   ^
+16 warnings and 15 errors generated.
+functions.c:4:1: error: unknown type name 'header_t'
+header_t hdr;
+^
+functions.c:5:1: error: unknown type name 'pixel_t'
+pixel_t hdr;
+^
+functions.c:8:35: warning: declaration of 'struct header_t' will not be visible outside of this function [-Wvisibility]
+void readHeader(FILE* ptr, struct header_t *hdr)
+                                  ^
+functions.c:10:34: error: incomplete definition of type 'struct header_t'
+  fscanf(ptr, "%s %d %d %d ", hdr->magic, &hdr->width, &hdr->height,
+                              ~~~^
+functions.c:8:35: note: forward declaration of 'struct header_t'
+void readHeader(FILE* ptr, struct header_t *hdr)
+                                  ^
+functions.c:14:37: warning: declaration of 'struct header_t' will not be visible outside of this function [-Wvisibility]
+void createHeader(FILE* ptr, struct header_t *hdr)
+                                    ^
+functions.c:16:36: error: incomplete definition of type 'struct header_t'
+  fprintf(ptr, "%s %d %d %d\n", hdr->magic, hdr->width, hdr->height,
+                                ~~~^
+functions.c:14:37: note: forward declaration of 'struct header_t'
+void createHeader(FILE* ptr, struct header_t *hdr)
+                                    ^
+functions.c:20:35: warning: declaration of 'struct header_t' will not be visible outside of this function [-Wvisibility]
+void readPixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                  ^
+functions.c:20:57: warning: declaration of 'struct pixel_t' will not be visible outside of this function [-Wvisibility]
+void readPixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                                        ^
+functions.c:24:21: error: incomplete definition of type 'struct header_t'
+  for(i = 0; i < hdr->height; i++)
+                 ~~~^
+functions.c:20:35: note: forward declaration of 'struct header_t'
+void readPixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                  ^
+functions.c:26:23: error: incomplete definition of type 'struct header_t'
+    for(j = 0; j < hdr->width; j++)
+                   ~~~^
+functions.c:20:35: note: forward declaration of 'struct header_t'
+void readPixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                  ^
+functions.c:28:36: error: subscript of pointer to incomplete type 'struct pixel_t'
+       fscanf(ptr, "%c%c%c", pix[i][j].r, pix[i][j].g, pix[i][j].b);
+                             ~~~~~~^
+functions.c:20:57: note: forward declaration of 'struct pixel_t'
+void readPixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                                        ^
+functions.c:33:36: warning: declaration of 'struct header_t' will not be visible outside of this function [-Wvisibility]
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                   ^
+functions.c:33:58: warning: declaration of 'struct pixel_t' will not be visible outside of this function [-Wvisibility]
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                                         ^
+functions.c:37:21: error: incomplete definition of type 'struct header_t'
+  for(i = 0; i < hdr->height; i++)
+                 ~~~^
+functions.c:33:36: note: forward declaration of 'struct header_t'
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                   ^
+functions.c:39:23: error: incomplete definition of type 'struct header_t'
+    for(j = 0; j < hdr->width; j++)
+                   ~~~^
+functions.c:33:36: note: forward declaration of 'struct header_t'
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                   ^
+functions.c:41:37: error: subscript of pointer to incomplete type 'struct pixel_t'
+       fprintf(ptr, "%c%c%c", pix[i][j].r, pix[i][j].g, pix[i][j].b);
+                              ~~~~~~^
+functions.c:33:58: note: forward declaration of 'struct pixel_t'
+void writePixels(FILE* ptr, struct header_t *hdr, struct pixel_t **pix)
+                                                         ^
+6 warnings and 10 errors generated.

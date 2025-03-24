@@ -1,0 +1,16 @@
+Running: Mancala 1 0 2 0 7 
+Positions Found: 712511
+NUMBER OF MOVES: 12
+[1.0.2.0.7]
+Move:1 yields [0.1.2.0.7]
+Move:5 yields [1.2.3.1.1]
+Move:3 yields [1.2.0.2.2]
+Move:4 yields [1.2.0.0.3]
+Move:5 yields [2.3.0.0.0]
+Move:1 yields [0.4.1.0.0]
+Move:2 yields [0.0.2.1.1]
+Move:5 yields [0.0.2.1.0]
+Move:3 yields [0.0.0.2.1]
+Move:5 yields [0.0.0.2.0]
+Move:4 yields [0.0.0.0.1]
+Move:5 yields [0.0.0.0.0]

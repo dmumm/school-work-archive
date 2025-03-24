@@ -1,0 +1,27 @@
+// Dylan Mumm, dmumm
+// CPSC 1020, Fall 2017
+// PA1, September 29th
+// Dr. Yvon Feaster
+
+Problems:
+
+Checking Neighbors, even after figuring out the problem was checking non-board
+values.
+* I fixed it by just adding a ton of conditionals, but its messy.
+
+Allocating memory without throwing errors in valgrind.
+* Ended up using calloc.
+
+Freeing memory
+* I had i=height; i>0, needed i=height-1; i>=0
+
+ Simply getting a clue on how to "propogateGuess". E
+ * Ended up experimenting with trial and error until I made gradual progress
+
+ Win state for option 4.
+ * Ended up with a simple counter but I tried using pointers and stuff
+
+Thoughts:
+
+LOVED the assignment, super fun, and gives perspective as to how minesweeper
+ works. Only issue was I think the .h file gave too much away.

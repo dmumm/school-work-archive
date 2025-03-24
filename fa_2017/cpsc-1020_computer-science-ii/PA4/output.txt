@@ -1,0 +1,151 @@
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #1
+**************************************************
+
+Apple                                    3.00
+    Sales Tax:                           0.24
+    Total:                               3.24
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #2
+**************************************************
+
+Banana                                   0.17
+    Sales Tax:                           0.01
+    Total:                               0.18
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #3
+**************************************************
+
+Pear                                     4.30
+    Sales Tax:                           0.34
+    Total:                               4.64
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #4
+**************************************************
+
+Lemon                                    2.40
+    Sales Tax:                           0.19
+    Total:                               2.59
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #5
+**************************************************
+
+Lemon                                    6.25
+    Sales Tax:                           0.50
+    Total:                               6.75
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #6
+**************************************************
+
+Tomatoes                                 2.61
+    Sales Tax:                           0.21
+    Total:                               2.82
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #7
+**************************************************
+
+Grapes                                   8.17
+    Sales Tax:                           0.65
+    Total:                               8.82
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #8
+**************************************************
+
+Lettuce                                  5.61
+    Sales Tax:                           0.45
+    Total:                               6.06
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #9
+**************************************************
+
+Carrot                                   1.48
+    Sales Tax:                           0.12
+    Total:                               1.60
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #10
+**************************************************
+
+Watermelon                               6.34
+    Sales Tax:                           0.51
+    Total:                               6.85
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #11
+**************************************************
+
+Greenbean                                1.91
+    Sales Tax:                           0.15
+    Total:                               2.07
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #12
+**************************************************
+
+Cucumber                                 4.09
+    Sales Tax:                           0.33
+    Total:                               4.42
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #13
+**************************************************
+
+Lemon                                    2.40
+    Sales Tax:                           0.19
+    Total:                               2.59
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #14
+**************************************************
+
+Lemon                                    6.25
+    Sales Tax:                           0.50
+    Total:                               6.75
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #15
+**************************************************
+
+Tomatoes                                 2.61
+    Sales Tax:                           0.21
+    Total:                               2.82
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #16
+**************************************************
+
+Grapes                                   8.17
+    Sales Tax:                           0.65
+    Total:                               8.82
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #17
+**************************************************
+
+Kale                                     2.28
+    Sales Tax:                           0.18
+    Total:                               2.46
+
+**************************************************
+Katie's Produce Stand | Clemson, SC | Receipt #18
+**************************************************
+
+Pepper                                   1.96
+    Sales Tax:                           0.16
+    Total:                               2.12
+
+Total sales for the day: $70.01
+Total sales tax collected for the day: $5.60
+Number of fruit sales for the day: 12
+Total fruit sales of $52.67 for the day
+Number of vegetable sales for the day: 6
+Total vegetable sales of $17.34 for the day
+Total customers added to the mailing list: 4

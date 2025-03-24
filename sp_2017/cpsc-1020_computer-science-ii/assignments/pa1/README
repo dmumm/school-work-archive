@@ -1,0 +1,14 @@
+1. My main problem was just wrapping my head around the intersection of
+   functions, structs, pointers, and malloc. My biggest problem by far was to
+   get my image properly read and passed into my 2d array, as if you can't get
+   that completed its very hard to progress onto the rest of the functions
+
+2. I primarily got my way through it via trying over and over again and slowly
+   reducing my amount of errors and warnings until it worked. I never solved my
+   issue with readImage
+
+3. I really liked the assignment. Ample time, a great way to learn the concepts,
+   and pretty fun. My issues with it were completely my fault for failing to
+   pay attention to malloc and pointers in class and falling behind on the labs,
+   and then procrastinating on this project until the last weekend when I was
+   already so behind.

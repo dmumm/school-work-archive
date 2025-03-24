@@ -1,0 +1,8 @@
+functions.c:19:58: error: member reference type 'pixel_t' (aka 'struct pixel') is not a pointer; maybe you meant to use '.'?
+      fscanf(inputFile, "%hhu%hhu%hhu", &inputImage[i][j]->r,
+                                         ~~~~~~~~~~~~~~~~^~
+                                                         .
+functions.c:19:41: error: cannot take the address of an rvalue of type 'unsigned char'
+      fscanf(inputFile, "%hhu%hhu%hhu", &inputImage[i][j]->r,
+                                        ^~~~~~~~~~~~~~~~~~~~
+2 errors generated.

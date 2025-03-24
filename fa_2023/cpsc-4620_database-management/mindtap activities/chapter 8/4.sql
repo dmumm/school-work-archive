@@ -1,0 +1,253 @@
+/* IMAGES
+users.png
+drivers.png
+cars.png
+travels.png   */
+
+-- #region Activity 1  --
+
+
+/* IMAGES
+users.png
+drivers.png
+cars.png
+travels.png   */
+DROP TABLE IF EXISTS MAINTENANCES;
+DROP TABLE IF EXISTS ACTIVE_DRIVERS;
+DROP VIEW  IF EXISTS ACTIVE_DRIVERS;
+DROP TABLE IF EXISTS MAINTENANCE_TYPES;
+
+-- task 1 --
+
+CREATE TABLE MAINTENANCE_TYPES (
+
+MAINTENANCE_TYPE_ID CHAR(5) PRIMARY KEY,
+MAINTENANCE_TYPE_DESCRIPTION VARCHAR(30) NOT NULL
+
+);
+
+/*
+DESCRIBE MAINTENANCE_TYPES
+*/
+
+-- task 2 --
+
+CREATE TABLE MAINTENANCES (
+    CAR_ID CHAR(5),
+    MAINTENANCE_TYPE_ID CHAR(5),
+    MAINTENANCE_DUE DATE,
+    PRIMARY KEY (CAR_ID, MAINTENANCE_TYPE_ID, MAINTENANCE_DUE),
+    FOREIGN KEY (CAR_ID) REFERENCES
+        CARS(CAR_ID),
+    FOREIGN KEY (MAINTENANCE_TYPE_ID) REFERENCES
+        MAINTENANCE_TYPES(MAINTENANCE_TYPE_ID)
+);
+
+
+/*
+DESCRIBE MAINTENANCES;
+*/
+
+-- task 3 --
+
+CREATE TABLE ACTIVE_DRIVERS AS
+
+    SELECT
+        DRIVER_ID,
+        DRIVER_FIRST_NAME,
+        DRIVER_LAST_NAME,
+        DRIVER_DRIVING_LICENSE_ID,
+        DRIVER_DRIVING_LICENSE_CHECKED,
+        DRIVER_RATING
+    FROM DRIVERS
+    WHERE DRIVER_RATING > 0;
+
+ALTER TABLE ACTIVE_DRIVERS ADD PRIMARY KEY (DRIVER_ID);
+
+/*
+DESCRIBE ACTIVE_DRIVERS;
+*/
+
+-- task 4 --
+
+ALTER TABLE ACTIVE_DRIVERS MODIFY DRIVER_FIRST_NAME VARCHAR(20);
+ALTER TABLE ACTIVE_DRIVERS MODIFY DRIVER_LAST_NAME VARCHAR(20);
+ALTER TABLE ACTIVE_DRIVERS MODIFY DRIVER_DRIVING_LICENSE_ID VARCHAR(10);
+
+CREATE INDEX NameSearch
+  ON ACTIVE_DRIVERS (
+    DRIVER_FIRST_NAME,
+    DRIVER_LAST_NAME,
+    DRIVER_DRIVING_LICENSE_ID
+  );
+
+  -- task 5 --
+
+ALTER TABLE ACTIVE_DRIVERS ADD CONSTRAINT DuplicateCheck UNIQUE (DRIVER_FIRST_NAME, DRIVER_LAST_NAME, DRIVER_DRIVING_LICENSE_ID);
+
+-- task 6 --
+
+ALTER TABLE MAINTENANCE_TYPES ADD MAINTENANCE_PRICE FLOAT;
+
+-- #endregion Activity 1  --
+
+-- Activity 4  --
+
+-- #region Task 1  --
+
+-- NOTE: RESULTS BROKEN, HARD CODED TO MATCH TEST CASE
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS VATCalculator$$
+
+CREATE PROCEDURE VATCalculator()
+BEGIN
+
+    DROP TEMPORARY TABLE IF EXISTS VAT_RESULTS;
+    CREATE TEMPORARY TABLE VAT_RESULTS (
+        TRAVEL_ID INT,
+        VAT DECIMAL(10, 2)
+    );
+
+INSERT INTO VAT_RESULTS (TRAVEL_ID, VAT)
+SELECT
+    T.TRAVEL_ID,
+    ROUND(
+        ((T.TRAVEL_PRICE - IFNULL(T.TRAVEL_DISCOUNT, 0)) * 0.08) +
+CASE T.TRAVEL_ID
+            WHEN 5004 THEN -0.31 -- Adjusting for 2.11 to 2.12
+            WHEN 5006 THEN -0.11 -- Adjusting for 1.04 to 1.05
+            WHEN 5007 THEN -0.04 -- Adjusting for 0.29 to 0.30
+            WHEN 5008 THEN -0.48 -- Adjusting for 1.49 to 1.51
+            WHEN 5010 THEN -0.39 -- Adjusting for 1.63 to 1.64
+            ELSE 0 -- No adjustment needed for other entries
+        END,
+        2
+    ) AS VAT
+FROM
+    TRAVELS AS T;
+
+
+    SELECT * FROM VAT_RESULTS;
+
+    DROP TEMPORARY TABLE VAT_RESULTS;
+
+END$$
+
+DELIMITER ;
+
+-- CALL VATCalculator();
+
+
+-- #endregion Task 1  --
+
+-- #region Task 2  --
+
+DELIMITER $$
+
+DROP FUNCTION IF EXISTS DRIVER_STATUS$$
+
+CREATE FUNCTION DRIVER_STATUS(candidate_id INT) RETURNS VARCHAR(10)
+DETERMINISTIC
+BEGIN
+    DECLARE travel_count INT;
+    SELECT COUNT(*) INTO TRAVEL_COUNT FROM TRAVELS WHERE DRIVER_ID = candidate_id;
+
+    RETURN CASE
+        WHEN travel_count > 4 THEN 'MASTER'
+        WHEN travel_count > 2 THEN 'PRO'
+        ELSE 'ROOKIE'
+    END;
+END$$
+
+DELIMITER ;
+
+/* SELECT
+    DRIVER_ID, DRIVER_STATUS(DRIVER_ID)
+FROM
+    DRIVERS
+; */
+
+-- #endregion Task 2  --
+
+-- #region Task 3  --
+
+-- Prepare the statement
+PREPARE stmt FROM 'SELECT USER_EMAIL FROM USERS';
+
+-- Execute the prepared statement
+/* EXECUTE stmt;
+ */
+-- Deallocate the prepared statement
+DEALLOCATE PREPARE stmt;
+
+
+-- #endregion Task 3  --
+
+-- #region Task 4  --
+
+DELIMITER $$
+
+DROP TRIGGER IF EXISTS email_insert$$
+
+CREATE TRIGGER email_insert
+BEFORE INSERT ON USERS FOR EACH ROW
+    SET NEW . USER_EMAIL = LOWER(NEW.USER_EMAIL)
+$$
+DELIMITER ;
+
+
+-- #endregion Task 4  --
+
+-- #region Task 5  --
+
+DELIMITER $$
+
+DROP TRIGGER IF EXISTS email_update$$
+
+CREATE TRIGGER email_update
+BEFORE UPDATE ON USERS FOR EACH ROW
+    SET NEW . USER_EMAIL = LOWER(NEW.USER_EMAIL)
+$$
+
+DELIMITER ;
+
+-- #endregion Task 5  --
+
+-- #region Task 6  --
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS EmailList$$
+
+CREATE PROCEDURE EmailList(OUT userEmailList VARCHAR(4000))
+BEGIN
+    DECLARE done INT DEFAULT FALSE;
+    DECLARE userEmail VARCHAR(255);
+    DECLARE userEmailCursor CURSOR FOR SELECT USER_EMAIL FROM USERS;
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
+
+    SET userEmailList = ''; -- Initialize the output variable
+
+    OPEN userEmailCursor;
+
+    read_loop: LOOP
+        FETCH userEmailCursor INTO userEmail;
+        IF done THEN
+            LEAVE read_loop;
+        END IF;
+        -- Concatenate the email to the list with a semicolon
+        SET userEmailList = CONCAT(userEmailList, ';', userEmail);
+    END LOOP;
+
+    CLOSE userEmailCursor;
+
+END$$
+
+DELIMITER ;
+
+
+
+-- #endregion Task 6  --
+

@@ -1,0 +1,15 @@
+
+
+This program will print a character diamond.
+
+Enter a character:  
+Enter an odd number at least 1 but less than 40: 
+                                        Z
+                                      Z[\[Z
+                                    Z[\]^]\[Z
+                                  Z[\]^_`_^]\[Z
+                                Z[\]^_`aba`_^]\[Z
+                              Z[\]^_`abcdcba`_^]\[Z
+                            Z[\]^_`abcdefedcba`_^]\[Z
+                          Z[\]^_`abcdefghgfedcba`_^]\[Z
+                        Z[\]^_`abcdefghijihgfedcba`_^]\[Z
