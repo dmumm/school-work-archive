@@ -1,0 +1,9 @@
+# Dylan Mumm
+# CPSC 3600
+# Project 1, Intro Python Assignment
+
+Programs requests user input data from network tests to calculate averages and standard deviations of throughput, RTT, and Status
+Prompts will repeat if invalid response detected (non-float or negative)
+To end input prompts, user must press Ctrl-C after inputting their final Connection Status value
+
+Program does not properly handlecases like user pressing control c before valid inputs completed for a full test result

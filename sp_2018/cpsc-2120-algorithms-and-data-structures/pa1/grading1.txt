@@ -1,0 +1,51 @@
+Asg 1 - CpSc 2120 - Goddard                                               #SECLABEL#
+Userid: #USERID#                     Name: #NAME#
+
+
+Compile Issues 20                               ____ 
+                               
+Run Issues 15                                   ____
+
+
+
+Corpus 15                                        ____
+
+  - default constructor and general 
+
+  - file constructor 
+
+
+
+MySentence Basics 20                             ____  
+
+  - general 
+
+  - printout 
+
+  - reverse 
+
+  - equals 
+
+
+
+
+MySentence: Rotation and Decode 15                ____  
+
+  - rotation 
+
+  - decode 
+ 
+
+
+Runner - 10                                       ____
+
+
+
+Style 5                                           _____ 
+
+
+Comments      HeaderFiles      VariableNames     GoodC++
+
+=====================================================================
+
+A                B                 C                D               E

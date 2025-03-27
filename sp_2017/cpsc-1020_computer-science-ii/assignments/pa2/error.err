@@ -1,0 +1,11 @@
+driver.cpp:7:37: error: expected ';' after top level declarator
+ bool checkPoint(Point p[], Point t)
+                                    ^
+                                    ;
+driver.cpp:56:10: error: expected unqualified-id
+    Point[i].setPoints(x, y);
+         ^
+driver.cpp:86:30: error: expected expression
+        if(checkPoint(Points[], Test))
+                             ^
+3 errors generated.

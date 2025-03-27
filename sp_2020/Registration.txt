@@ -1,0 +1,16 @@
+Need:
+* Linear Algebra
+* Theory
+* Operating Systems
+* 12 3000+ credits
+
+Summer:
+* Operating Systems / Database (3)
+* H&C Interaction (6)
+
+Fall:
+* Linear Algebra
+* 2d Game (9)
+* Foundations of Comp Sci
+* Operating Systems / Database
+* Special Topic?

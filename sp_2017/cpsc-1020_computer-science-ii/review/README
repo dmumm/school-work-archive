@@ -1,0 +1,10 @@
+Your goal for this example is to:
+
+1. Create the Banana class which is a derived class of Fruit
+	a. The Banana class has a unique property called "isRipe", which is a boolean
+	b. Use the Apple class as an example, making sure to implement the ostream operator
+
+2. Complete the FruitStand class, which has a collection of fruits and helper methods
+		and an overloaded ostream operator. See FruitStand.hpp and FruitStand.cpp
+
+3. In the driver, add some fruits to the stand and see if it works. 

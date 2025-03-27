@@ -1,0 +1,43 @@
+Regular Constructor
+Copy constructor
+Default constructor
+Regular Constructor
+Hello world Hello
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Default constructor
+= operator
+Hello Hello
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+== operator
+This should be true (1)
+1
+
+!= operator
+== operator
+This should be false (0)
+0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The size of a is 6 and its value is Hello
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ operator MyArray + MyArray
+Default constructor
+Hello world
++ operator MyArray + char
+Default constructor
+Hello world!
+!
++ operator  char + MyArray
+Default constructor
+!Hello world!
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Default constructor
+Enter the size of your array
+including the null character:
+
+Enter the content for the array.
+No need to add the null character:
+World
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Regular Constructor
+operator []
+Your subscript 50 is out of bounds

@@ -1,0 +1,560 @@
+
+<!-- saved from url=(0045)https://people.cs.clemson.edu/~mark/3220.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"> 
+<title>CPSC/ECE 3220 -- Mark Smotherman</title> 
+<style text="TEXT/CSS">
+  body{margin-left: 5%; margin-right: 5%;
+       color: black; background: white;}
+  hr,h1,h2,h3,h4{margin-left: -4%;}
+  hr{margin-right: -4%;}
+  em{color: green}
+  cite{color: brown}
+</style></head>
+
+<body><p>
+</p><p>
+</p><h1>Computer Science 3220 / Electrical and Computer Engineering 3220 - Section 2
+<br>
+Introduction to Operating Systems
+<br>
+Spring 2021</h1>
+<p>
+<em>This file can be found in http://www.cs.clemson.edu/~mark/3220.html.
+<br>
+Last update: January 9, 2021.</em>
+</p><p>
+</p><hr>
+<p>
+<b>Course Description:</b>
+Detailed study of management techniques for the control of computer
+hardware resources. Topics include interrupt systems, primitive level
+characteristics of hardware and the management of memory, processor,
+devices, and data.
+</p><p>
+<b>Key Topics:</b>
+</p><ul>
+<li> hardware support of operating systems
+</li><li> synchronization of concurrent threads
+</li><li> scheduling of threads
+</li><li> allocation of physical and virtual memory
+</li><li> storage of data in files
+</li></ul>
+<p>
+<b>Learning Outcomes:</b>
+Students who successfully complete this course should be able to:
+</p><ul>
+<li> Explain the objectives and functions of a modern operating system.
+</li><li> Contrast kernel and user mode in an operating system.
+</li><li> Explain the actions of hardware in response to an interrupt.
+</li><li> Describe the difference between processes and threads.
+</li><li> Demonstrate the potential run-time problems arising from the
+concurrent operation of many separate threads.
+</li><li> Use a synchronization technique to control concurrency among
+multiple threads.
+</li><li> List the four necessary conditions for deadlock to occur.
+</li><li> Compare and contrast the common algorithms used for both preemptive
+and non-preemptive scheduling of threads.
+</li><li> Describe the data structures needed to support thread management
+and thread scheduling.
+</li><li> Explain the need for dynamic priority adjustments in thread scheduling
+(e.g., priority aging and priority inheritance).
+</li><li> Implement a policy for variable-length memory allocation.
+</li><li> Describe how a virtual memory address is mapped into a physical memory
+address in a computer system with paged virtual memory.
+</li><li> Describe how files are stored in secondary storage.
+</li><li> Explain how an access control list protects files.
+</li></ul>
+<p>
+<b>Prerequisites:</b> CPSC 2120 and CPSC 2310 with a C or better;
+or ECE 2230 and ECE 2720 with a C or better.
+</p><p>
+<b>Meetings:</b> 3:30-4:45 TR, synchronous online via Zoom,
+see links on Canvas
+</p><p>
+<b>Instructor:</b>
+Mark Smotherman, mark@clemson.edu, 656-5878
+</p><p>
+<b>Office Hours:</b> 3:00-4:00 MW (available by Zoom or telephone);
+also email since I'm usually available at other times
+</p><p>
+<b>Required Textbook:</b>
+Thomas Anderson and Michael Dahlin, Operating Systems: Principles &amp; Practice,
+2nd edition, Recursive Books, 2014.
+<a href="http://ospp.cs.washington.edu/">
+companion web site</a>
+</p><p>
+<b>Grading:</b>
+</p><ul>
+<li> 8% - pre-class activities (drop three lowest scores)
+</li><li> 8% - in-class activities (drop three lowest scores)
+</li><li> 8% - quizzes (drop three lowest scores)
+</li><li> 20% - 4 programs @ 5%
+</li><li> 42% - 3 in-class exams @ 14%
+</li><li> 14% - final exam
+</li></ul>
+<p>
+<b>Course Expectations:</b>
+</p><ul>
+<li> The course will be structured with daily work, projects, and exams.
+For class days other than those with in-class exams, the daily work will
+typically require you to:
+<ul>
+<li> Complete readings and prepare written answers for the pre-class
+     activities. The purpose is to have you engage with terminology,
+     concepts, and methods before you attend class or watch the
+     recorded video.
+</li><li> Answer additional questions or work problems during the class.
+     The purpose is to provide practice with the material and to confirm
+     your correct understanding of the material.
+</li><li> Complete an after-class quiz based on your pre-class
+     preparation and your in-class activities and discussions. The
+     purpose is to have you test your understanding prior to an exam.
+</li></ul>
+<p>
+</p></li><li> Please wait up to 15 minutes if I am late to class.
+<p>
+</p></li><li> Exams
+<ul>
+<li> Any exam that was scheduled at the time of a class cancellation
+due to inclement weather, University power outage, etc., will be given
+at the next class meeting unless contacted by the instructor. Any
+assignments due at the time of a class cancellation due to inclement
+weather will be due at the next class meeting unless the instructor
+contacts students. Any extension or postponement of assignments or
+exams must be granted by the instructor via email or Canvas within
+24 hours of the weather-related cancellation.
+</li><li> Students may be excused from the final exam when those students
+want their final grades to be based on the coursework prior to the
+final exam.
+</li></ul>
+<p>
+</p></li><li> Programs
+<ul>
+<li> Programs must run on School of Computing servers. (Your laptop
+     may have applications and/or libraries not available on the servers;
+     thus, if your program makes use of these, your program cannot be run
+     and graded on the servers.)
+</li><li> Programs are due just before midnight on the due date.
+</li><li> It is your responsibility to submit the correct file(s) in the correct
+     format(s). You should check each submitted file for correctness and to
+     ensure that it is uncorrupted. Files will be graded as-is, and
+     resubmission will not be allowed.
+</li><li> Programs that do not compile will receive no credit.
+</li><li> Programs that work correctly for a few test cases but not for all
+     reasonable inputs will not be given full points. It is your
+     responsibility to code correctly for reasonable inputs.
+</li><li> Late programs will be accepted but 10 points will be deducted for
+     each day late, up to five days. Thus a program that is three days
+     late will have a maximum possible point total of 70.
+</li><li> Unless otherwise noted, programming is to be individual work.
+     Do not discuss the solution to an assignment with anyone else
+     (either a class member or someone else). If you have questions,
+     ask me in person or by email.
+</li></ul>
+</li><li> Attendance
+<ul>
+<li> Daily attendance will not be graded. You are responsible for keeping
+up with the daily work (i.e., Pre-Class Activities, In-Class Activities,
+and After-Class Quizzes) according to their due dates. Late submission
+of daily work without a pre-approved excused absence or without
+extenuating circumstances will result in grades of 0 for the daily work.
+</li><li> Attendance at exams is expected.  Missing an exam without a
+pre-approved excused absence or without extenuating circumstances
+will result in a grade of 0 for the exam.
+</li></ul>
+</li></ul>
+<p>
+<b>Drops Days:</b> Drop w/o record by January 20;
+drop w/o grade by March 12
+</p><p>
+</p><hr>
+<p>
+<b>Clemson Statement of Academic Integrity:</b>
+"As members of the Clemson University community, we have inherited
+Thomas Green Clemson's vision of this institution as a 'high seminary
+of learning.' Fundamental to this vision is a mutual commitment to
+truthfulness, honor, and responsibility, without which we cannot earn
+the trust and respect of others. Furthermore, we recognize that academic
+dishonesty detracts from the value of a Clemson degree. Therefore, we
+shall not tolerate lying, cheating, or stealing in any form."
+</p><p>
+<b>Work turned in for credit in a previous class:</b>
+When appropriate and when fully documented, you may reuse your own work
+from a previous class. For example, if you are reusing parts of a program
+written for a previous course, add a notice to your program header comments
+about the scope of the reuse and the course in which the work was previously
+submitted.
+</p><p>
+</p><hr>
+<p>
+<b>Accessibility Statement:</b>
+Clemson University values the diversity of our student body as a
+strength and a critical component of our dynamic community. Students
+with disabilities or temporary injuries/conditions may require
+accommodations due to barriers in the structure of facilities,
+course design, technology used for curricular purposes, or other
+campus resources. Students who experience a barrier to full access
+to a class should let the professor know, and make an appointment
+to meet with a staff member in Student Accessibility Services as
+soon as possible. You can make an appointment by calling 864-656-6848
+or by emailing studentaccess@lists.clemson.edu. Students who receive
+Academic Access Letters are strongly encouraged to request, obtain
+and present these to their professors as early in the semester as
+possible so that accommodations can be made in a timely manner.
+It is the student's responsibility to follow this process each
+semester. You can access further information here:
+http://www.clemson.edu/campus-life/campusservices/sds/.
+</p><p>
+</p><hr>
+<p>
+<b>Title IX (Sexual Harassment) Statement:</b>
+Clemson University is committed to a policy of equal opportunity
+for all persons and does not discriminate on the basis of race,
+color, religion, sex, sexual orientation, gender, pregnancy,
+national origin, age, disability, veteran's status, genetic
+information or protected activity (e.g., opposition to prohibited
+discrimination or participation in any complaint process, etc.)
+in employment, educational programs and activities, admissions
+and financial aid. This includes a prohibition against sexual
+harassment and sexual violence as mandated by Title IX of the
+Education Amendments of 1972. The University is committed to
+combatting sexual harassment and sexual violence. As a result,
+you should know that University faculty and staff members who
+work directly with students are required to report any instances
+of sexual harassment and sexual violence, to the University's
+Title IX Coordinator. What this means is that as your professor,
+I am required to report any incidents of sexual harassment,
+sexual violence or misconduct, stalking, domestic and/or
+relationship violence that are directly reported to me, or of
+which I am somehow made aware.
+</p><p>
+There are two important exceptions to this requirement about
+which you should be aware:
+</p><ul>
+<li> Confidential Resources and facilitators of sexual awareness
+programs such as "Take Back the Night" and "Aspire to be Well"
+when acting in those capacities, are not required to report
+incidents of sexual discrimination.
+</li><li> Another important exception to the reporting requirement
+exists for academic work. Disclosures about sexual harassment,
+sexual violence, stalking, domestic and/or relationship violence
+that are shared as part of an academic project, a research project,
+classroom discussion, or course assignment, are not required to be
+disclosed to the University's Title IX Coordinator.
+</li></ul>
+This policy is located at
+http://www.clemson.edu/campus-life/campus-services/access/title-ix/.
+Ms. Alesia Smith is the Executive Director for Equity Compliance and
+the Title IX Coordinator. Her office is located at 223 Holtzendorff Hall,
+phone number is 864.656.3181, and email address is alesias@clemson.edu. 
+<p>
+</p><hr>
+<p>
+<b>Academic Continuity Plan for this Class:</b>
+Clemson has developed an academic continuity plan for academic operations.
+Should University administration officially determine that the physical
+classroom facility is not available, class will be conducted in a virtual
+(online) format. The University issues official disruption notifications
+through email/www/test notification/social media. When notified, use one
+of the following links to navigate for Clemson Canvas, where you will find
+important information about how we will conduct class:
+</p><ul>
+<li> Primary access link: www.clemson.edu/canvas
+</li><li> Secondary access link, if needed: https://clemson.instructure.com/
+</li><li> You can also use the Canvas Student App. 
+</li></ul>
+Our activities for teaching and learning will occur through our Canvas
+course. This includes assignments and submissions.
+<p>
+</p><hr>
+<p>
+<b>Note:</b>
+The course syllabus is a general plan for the course. I reserve the right
+to make changes to the syllabus, including project due dates and in-class
+exam dates, when unforeseen circumstances occur. I will announce any
+changes as early as possible so that you can adjust your schedule.
+I will not make changes arbitrarily. Instead, I will work to design any
+changes so that we can still meet the course learning outcomes without
+putting you at a disadvantage.
+</p><p>
+</p><hr>
+<p>
+<b>Topical Schedule:</b> (numbers in parentheses refer to assignment numbers)
+</p><p>
+  </p><ul>
+  <li> Thursday, January 7 -
+       introduction to course
+       (<a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_0.pptx">
+       slides</a>)
+<p>
+  </p></li><li> Tuesday, January 12 (1) -
+       OS definition, evaluation, and history (Chapter 1,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_1.pptx">
+       slides</a>)
+  </li><li> Thursday, January 14 (2) -
+       Kernels, interrupts, and processes (Chapter 2,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_2a.pptx">
+       part a slides</a>)
+  </li><li> Tuesday, January 19 (3) -
+       Continued
+       (<a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_2b.pptx">
+       part b slides</a>)
+  </li><li> Thursday, January 21 (4) -
+       Programming interface (Chapter 3,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_3.pptx">
+       slides</a>,
+       <a href="http://www.cs.clemson.edu/~mark/322/fork.c">
+       fork.c</a>,
+       <a href="http://www.cs.clemson.edu/~mark/322/pipe.c">
+       pipe.c</a>)
+  </li><li> Tuesday, January 26 (5) -
+       Threads and concurrency (Chapter 4,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_4a.pptx">
+       part a slides</a>,
+       <a href="http://www.cs.clemson.edu/~mark/322/create.c">
+       create.c</a>,
+       <a href="http://www.cs.clemson.edu/~mark/322/bzero.c">
+       bzero.c</a>)
+  </li><li> Thursday, January 28 (6) -
+       Continued
+       (<a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_4b.pptx">
+       part b slides</a>)
+  </li><li> Tuesday, February 2 -
+       <b>Exam 1</b>
+<p>
+  </p></li><li> Thursday, February 4 (7) -
+       Synchronized access to shared objects (Chapter 5,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_5a.pptx">
+       part a slides</a>)
+  </li><li> Tuesday, February 9 (8) -
+       Continued
+       (<a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_5b.pptx">
+       part b slides</a>)
+  </li><li> Thursday, February 11 (9) -
+       Semaphores
+  </li><li> Tuesday, February 16 (10) -
+       Multiprocessor locking (Chapter 6a,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_6a.pptx">
+       part a slides</a>)
+  </li><li> Thursday, February 18 (11) -
+       Deadlock (Chapter 6b,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_6b.pptx">
+       part b slides</a>)
+  </li><li> Tuesday, February 23 (12) -
+       Scheduling (Chapter 7,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_7a.pptx">
+       part a slides</a>)
+  </li><li> Thursday, February 25 (13)-
+       Continued
+       (<a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_7b.pptx">
+       part b slides</a>)
+  </li><li> Tuesday, March 2 -
+       <b>Exam 2</b>
+<p>
+  </p></li><li> Thursday, March 4 (14) -
+       Dynamic memory allocation
+       (Wilson, et al.,
+       <a href="https://www.researchgate.net/publication/2448703_Dynamic_Storage_Allocation_A_Survey_and_Critical_Review">
+       "Dynamic Storage Allocation: A Survey and Critical Review"</a>,
+       <a href="http://www.cs.clemson.edu/~mark/322/os_dynamic_memory_allocation.pptx">
+       slides</a>);
+  </li><li> Tuesday, March 9 (15) -
+       Address translation (Chapter 8,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_8a.pptx">
+       part a slides</a>)
+  </li><li> Thursday, March 11 (16) -
+       Continued
+       (<a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_8b.pptx">
+       part b slides</a>)
+  </li><li> Tuesday, March 16 -
+       Spring Break
+  </li><li> Thursday, March 18 -
+       Spring Break
+  </li><li> Tuesday, March 23 (17) -
+       Virtual memory and replacement policies (Chapter 9,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_9.pptx">
+       slides</a>)
+  </li><li> Thursday, March 25 (18) -
+       Continued
+  </li><li> Tuesday, March 30 (19) -
+       Advanced memory management (Chapter 10,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_10.pptx">
+       slides</a>)
+  </li><li> Thursday, April 1 -
+       <b>Exam 3</b>
+<p>
+  </p></li><li> Tuesday, April 6 (20) -
+       File systems (Chapter 11,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_11.pptx">
+       slides</a>)
+  </li><li> Thursday, April 8 (21) -
+       Storage devices (Chapter 12, 
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_12.pptx">
+       slides</a>)
+  </li><li> Tuesday, April 13 (22) -
+       UNIX (Ritchie and Thompson,
+       <a href="https://www.bell-labs.com/usr/dmr/www/cacm.pdf">
+       "The UNIX Time-Sharing System"</a>,
+       <a href="http://www.cs.clemson.edu/~mark/322/Unix_Ritchie_and_Thompson.pptx">
+       slides</a>)
+  </li><li> Thursday, April 15 (23) -
+       Files and directories (Chapter 13,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_13a.pptx">
+       part a slides</a>)
+  </li><li> Tuesday, April 20 (24) -
+       Continued
+       (<a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_13b.pptx">
+       part b slides</a>)
+  </li><li> Thursday, April 22 (25) -
+       Reliable storage (Chapter 14,
+       <a href="http://www.cs.clemson.edu/~mark/322/ospp_chapter_14.pptx">
+       slides</a>)
+<p>
+  </p></li><li> Friday, April 30 -
+       <b>Final Exam</b>, 11:30 a.m. - 2:00 p.m.
+  </li></ul>
+<p>
+</p><hr>
+<p>
+<b>Spring 2020 Projects</b>
+</p><ul>
+<li> Interprocess communication using unnamed pipes
+</li><li> Resource allocation using a lock and a condition variable
+</li><li> Simulation of three simple scheduling policies
+</li><li> Coalesce free blocks in a boundary-tag dynamic memory allocation algorithm
+</li></ul>
+<p>
+<b>Spring 2021 Projects</b>
+</p><ul>
+<li> TBA
+</li><li> TBA
+</li><li> TBA
+</li><li> TBA
+</li></ul>
+<p>
+</p><hr>
+<p>
+<b>Study Guides and Example Exams:</b>
+  </p><ul>
+  <li> <a href="http://www.cs.clemson.edu/~mark/322/s21.sg1.txt">
+       Exam 1 Study Guide</a> (Chapters 1-4)
+  </li><li> <a href="http://www.cs.clemson.edu/~mark/322/s21.sg2.txt">
+       Exam 2 Study Guide</a> (Chapters 5-7)
+  </li><li> <a href="http://www.cs.clemson.edu/~mark/322/s21.sg3.txt">
+       Exam 3 Study Guide</a> (Chapters 8-10)
+  </li><li> <a href="http://www.cs.clemson.edu/~mark/322/s21.sg4.txt">
+       Final Exam Study Guide</a> (comprehensive plus Chapters 11-14)
+<p>
+  </p></li><li> The exams linked below illustrate the types of questions you
+       should expect.
+    <p>
+    </p><ul>
+    <li> <a href="http://www.cs.clemson.edu/~mark/322/sum18_e1.pdf">
+         Summer 2018 Exam 1</a>
+    </li><li> <a href="http://www.cs.clemson.edu/~mark/322/sum18_e2.pdf">
+         Summer 2018 Exam 2</a>
+    </li><li> <a href="http://www.cs.clemson.edu/~mark/322/sum18_e3.pdf">
+         Summer 2018 Exam 3</a>
+    </li><li> <a href="http://www.cs.clemson.edu/~mark/322/sum18_e4.pdf">
+         Summer 2018 Final Exam</a>
+<p>
+    </p></li><li> <a href="http://www.cs.clemson.edu/~mark/322/sum19_e1.pdf">
+         Summer 2019 Exam 1</a>
+    </li><li> <a href="http://www.cs.clemson.edu/~mark/322/sum19_e2.pdf">
+         Summer 2019 Exam 2</a>
+    </li><li> <a href="http://www.cs.clemson.edu/~mark/322/sum19_e3.pdf">
+         Summer 2019 Exam 3</a>
+    </li><li> <a href="http://www.cs.clemson.edu/~mark/322/sum19_e4.pdf">
+         Summer 2019 Final Exam</a>
+<p>
+    </p></li><li> <a href="http://www.cs.clemson.edu/~mark/322/f19_e1.pdf">
+         Fall 2019 Exam 1</a>
+    </li><li> <a href="http://www.cs.clemson.edu/~mark/322/f19_e2.pdf">
+         Fall 2019 Exam 2</a>
+    </li><li> <a href="http://www.cs.clemson.edu/~mark/322/f19_e3.pdf">
+         Fall 2019 Exam 3</a>
+    </li><li> <a href="http://www.cs.clemson.edu/~mark/322/f19_e4.pdf">
+         Fall 2019 Final Exam</a>
+<p>
+    </p></li><li> <a href="http://www.cs.clemson.edu/~mark/322/s20_e1.pdf">
+         Spring 2020 Exam 1</a>
+    </li><li> <a href="http://www.cs.clemson.edu/~mark/322/s20_e2.pdf">
+         Spring 2020 Exam 2</a>
+    </li><li> <a href="http://www.cs.clemson.edu/~mark/322/s20_e3.pdf">
+         Spring 2020 Exam 3</a>
+    </li><li> <a href="http://www.cs.clemson.edu/~mark/322/s20_e4.pdf">
+         Spring 2020 Final Exam</a>
+    </li></ul>
+</li></ul>
+<p>
+</p><hr>
+<p>
+<b>Online Resources for Similar Courses:</b>
+</p><ul>
+<li> <a href="http://www.stanford.edu/~ouster/cgi-bin/cs140-winter16/lectures.php">
+     CS 140: Operating Systems</a>, John Ousterhout, Stanford
+</li><li> <a href="https://cs162.eecs.berkeley.edu/">
+     CS 162: Operating Systems and Systems Programming</a>,
+     Ion Stoica, UC Berkeley
+</li><li> <a href="https://courses.cs.washington.edu/courses/cse451/15sp/">
+     CSE 451: Operating Systems</a>, John Zahorjan, UW
+</li><li> <a href="http://flint.cs.yale.edu/cs422/">
+     CS 422/522: Design and Implementation of Operating Systems</a>,
+     Zhong Shao, Yale
+</li><li> <a href="http://www.youtube.com/user/CMPT300Videos">
+     CMPT 300 videos</a>, Introduction to Operating Systems,
+     Arvindh Shriraman, Simon Fraser University
+<p>
+</p></li><li> Allen Downey,
+     <a href="http://greenteapress.com/semaphores/LittleBookOfSemaphores.pdf">
+     The Little Book of Semaphores</a>, 2nd ed., version 2.2.1, 2016
+<p>
+</p></li><li> pthread library links
+    <ul>
+    <li> Blaise Barney,
+         <a href="https://computing.llnl.gov/tutorials/pthreads/">
+         POSIX Threads Programming</a>,
+         Lawrence Livermore National Laboratory, on-line tutorial
+    </li><li> Alfred Park,
+         <a href="http://randu.org/tutorials/threads/">
+         Multithreaded Programming (POSIX pthreads Tutorial)</a>
+    </li><li> Remzi Arpaci-Dusseau and Andrea Arpaci-Dusseau,
+         <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/">
+         Operating Systems: Three Easy Pieces</a>, on-line book
+    </li><li> Oracle, Multithreaded Programming Guide,
+         <a href="http://docs.oracle.com/cd/E26502_01/html/E35303/sync-83092.html#scrolltoc">
+         Programming with Synchronization Objects</a>
+    </li><li> <a href="http://valgrind.org/docs/manual/hg-manual.html">
+         Helgrind tool for detecting synchronization errors in pthread code</a>
+         (part of Valgrind tool set)
+    </li></ul>
+</li></ul>
+<p>
+</p><hr>
+<p>
+<b>C Language Review:</b>
+</p><ul>
+<li> <a href="http://www.cs.clemson.edu/~mark/322/c_storage.txt">
+     Storage classes, pointers, and dynamic memory allocation</a>
+</li><li> <a href="http://www.cs.clemson.edu/~mark/322/c_bitwise.txt">
+     Bitwise operators and shifts</a>
+</li><li> <a href="http://www.cs.clemson.edu/~mark/322/c_command.txt">
+     Command line arguments</a>
+</li></ul>
+<p>
+Based on his experience with helping students at Clemson, Jacob Sorber
+has recorded a number of videos about programming in C. The playlist is
+<a href="https://www.youtube.com/playlist?list=PL9IEJIKnBJjGsttQusXPNuEknLQ6leUfS">
+here.</a>
+</p><p>
+</p><hr>
+<p>
+<a href="http://www.cs.clemson.edu/~mark/homepage.html">
+[Mark's homepage]</a>
+<a href="http://www.cs.clemson.edu/">
+[CPSC homepage]</a>
+<a href="http://www.clemson.edu/">
+[Clemson Univ. homepage]</a>
+</p><p>
+<i> mark@clemson.edu </i>
+</p></body></html>
